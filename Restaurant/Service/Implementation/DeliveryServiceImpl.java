@@ -1,9 +1,9 @@
-package ProjectJavaOOP.Restaurant.Service.Implementation;
+package EraSoftTask.Restaurant.Service.Implementation;
 
-import ProjectJavaOOP.Restaurant.Data.OrderData;
-import ProjectJavaOOP.Restaurant.Model.Order;
-import ProjectJavaOOP.Restaurant.Model.OrderStatus;
-import ProjectJavaOOP.Restaurant.Service.Interfaces.DeliveryService;
+import EraSoftTask.Restaurant.Data.OrderData;
+import EraSoftTask.Restaurant.Model.Order;
+import EraSoftTask.Restaurant.Model.OrderStatus;
+import EraSoftTask.Restaurant.Service.Interfaces.DeliveryService;
 
 public class DeliveryServiceImpl implements DeliveryService {
 

@@ -1,10 +1,10 @@
-package ProjectJavaOOP.Restaurant.Data;
+package EraSoftTask.Restaurant.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-import ProjectJavaOOP.Restaurant.Model.Chef;
-import ProjectJavaOOP.Restaurant.Model.Customer;
-import ProjectJavaOOP.Restaurant.Model.Delivery;
+import EraSoftTask.Restaurant.Model.Chef;
+import EraSoftTask.Restaurant.Model.Customer;
+import EraSoftTask.Restaurant.Model.Delivery;
 
 public class UserData {
 

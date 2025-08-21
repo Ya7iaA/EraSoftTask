@@ -1,4 +1,4 @@
-package ProjectJavaOOP.Restaurant.Model;
+package EraSoftTask.Restaurant.Model;
 
 public abstract class User {
 

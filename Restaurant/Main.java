@@ -1,6 +1,6 @@
-package ProjectJavaOOP.Restaurant;
+package EraSoftTask.Restaurant;
 
-import ProjectJavaOOP.Restaurant.View.Run;
+import EraSoftTask.Restaurant.View.Run;
 
 public class Main {
     public static void main(String[] args) {

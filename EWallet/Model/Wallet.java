@@ -1,4 +1,4 @@
-package ProjectJavaOOP.EWallet.Model;
+package EraSoftTask.EWallet.Model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ProjectJavaOOP.Restaurant.Model;
+package EraSoftTask.Restaurant.Model;
 
 import java.util.ArrayList;
 import java.util.List;

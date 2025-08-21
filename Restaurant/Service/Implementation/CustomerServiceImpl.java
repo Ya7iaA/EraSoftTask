@@ -1,11 +1,11 @@
-package ProjectJavaOOP.Restaurant.Service.Implementation;
+package EraSoftTask.Restaurant.Service.Implementation;
 
-import ProjectJavaOOP.Restaurant.Service.Interfaces.CustomerService;
-import ProjectJavaOOP.Restaurant.Data.DishData;
-import ProjectJavaOOP.Restaurant.Data.OrderData;
-import ProjectJavaOOP.Restaurant.Model.Customer;
-import ProjectJavaOOP.Restaurant.Model.Dish;
-import ProjectJavaOOP.Restaurant.Model.Order;
+import EraSoftTask.Restaurant.Service.Interfaces.CustomerService;
+import EraSoftTask.Restaurant.Data.DishData;
+import EraSoftTask.Restaurant.Data.OrderData;
+import EraSoftTask.Restaurant.Model.Customer;
+import EraSoftTask.Restaurant.Model.Dish;
+import EraSoftTask.Restaurant.Model.Order;
 
 public class CustomerServiceImpl implements CustomerService {
 

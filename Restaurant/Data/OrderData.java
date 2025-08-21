@@ -1,8 +1,8 @@
-package ProjectJavaOOP.Restaurant.Data;
+package EraSoftTask.Restaurant.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-import ProjectJavaOOP.Restaurant.Model.Order;
+import EraSoftTask.Restaurant.Model.Order;
 
 public class OrderData {
 

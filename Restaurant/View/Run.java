@@ -1,16 +1,16 @@
-package ProjectJavaOOP.Restaurant.View;
+package EraSoftTask.Restaurant.View;
 
 import java.util.Scanner;
-import ProjectJavaOOP.Restaurant.Data.DishData;
-import ProjectJavaOOP.Restaurant.Data.UserData;
-import ProjectJavaOOP.Restaurant.Model.Chef;
-import ProjectJavaOOP.Restaurant.Model.Customer;
-import ProjectJavaOOP.Restaurant.Model.Delivery;
-import ProjectJavaOOP.Restaurant.Model.Dish;
-import ProjectJavaOOP.Restaurant.Model.OrderStatus;
-import ProjectJavaOOP.Restaurant.Service.Implementation.ChefServiceImpl;
-import ProjectJavaOOP.Restaurant.Service.Implementation.CustomerServiceImpl;
-import ProjectJavaOOP.Restaurant.Service.Implementation.DeliveryServiceImpl;
+import EraSoftTask.Restaurant.Data.DishData;
+import EraSoftTask.Restaurant.Data.UserData;
+import EraSoftTask.Restaurant.Model.Chef;
+import EraSoftTask.Restaurant.Model.Customer;
+import EraSoftTask.Restaurant.Model.Delivery;
+import EraSoftTask.Restaurant.Model.Dish;
+import EraSoftTask.Restaurant.Model.OrderStatus;
+import EraSoftTask.Restaurant.Service.Implementation.ChefServiceImpl;
+import EraSoftTask.Restaurant.Service.Implementation.CustomerServiceImpl;
+import EraSoftTask.Restaurant.Service.Implementation.DeliveryServiceImpl;
 
 public class Run {
     private Scanner scanner = new Scanner(System.in);

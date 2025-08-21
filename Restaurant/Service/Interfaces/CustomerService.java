@@ -1,4 +1,4 @@
-package ProjectJavaOOP.Restaurant.Service.Interfaces;
+package EraSoftTask.Restaurant.Service.Interfaces;
 
 public interface CustomerService {
 

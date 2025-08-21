@@ -1,6 +1,6 @@
-package ProjectJavaOOP.Restaurant.Service.Interfaces;
+package EraSoftTask.Restaurant.Service.Interfaces;
 
-import ProjectJavaOOP.Restaurant.Model.OrderStatus;
+import EraSoftTask.Restaurant.Model.OrderStatus;
 
 public interface ChefService {
 

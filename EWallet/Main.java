@@ -1,6 +1,6 @@
-package ProjectJavaOOP.EWallet;
+package EraSoftTask.EWallet;
 
-import ProjectJavaOOP.EWallet.View.Run;
+import EraSoftTask.EWallet.View.Run;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ProjectJavaOOP.Restaurant.Model;
+package EraSoftTask.Restaurant.Model;
 
 public enum OrderStatus {
     PENDING, READY_FOR_DELIVERY, DELIVERED
