@@ -13,3 +13,7 @@
 ### Thread
 
 ### EWallet System
+
+### Oracle Database
+
+### Servlet ans JSP
