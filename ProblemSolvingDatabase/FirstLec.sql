@@ -1,5 +1,5 @@
 CREATE TABLE Manger (
-    id NUMBER PRIMARY KEY,
+    id NUMBER,
     name VARCHAR2(100),
     age NUMBER,
     birth_date DATE,

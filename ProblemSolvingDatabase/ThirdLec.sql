@@ -1,0 +1,17 @@
+SELECT * FROM employees WHERE EmployeeID BETWEEN 100 AND 105;
+SELECT * FROM employees WHERE EmployeeID IN (151, 152, 153, 154, 155);
+SELECT * FROM employees WHERE LOWER(FirstName) LIKE 'p%';
+SELECT * FROM employees WHERE LOWER(FirstName) LIKE '%a';
+SELECT * FROM employees WHERE LOWER(FirstName) LIKE '%a%';
+SELECT * FROM employees WHERE LOWER(FirstName) LIKE '__e%';
+SELECT * FROM employees WHERE ManagerID IS NULL;
+SELECT * FROM employees WHERE ManagerID IS NOT NULL;
+INSERT INTO employees (EmployeeID, FirstName, LastName, JobID, hire_date, Salary, ManagerID) VALUES (301, 'Ali', 'Hassan', 'IT_PROG', '2\8\2005', 4000, NULL);
+SELECT * FROM employees WHERE JobID IN ('AD_VP', 'IT_PROG');
+SELECT * FROM employees ORDER BY LastName ASC;
+SELECT * FROM employees ORDER BY hire_date DESC;
+SELECT * FROM employees ORDER BY department_id ASC, Salary DESC;
+SELECT EmployeeID, FirstName, LOWER(LastName) AS LastName FROM employees;
+SELECT EmployeeID, UPPER(FirstName) AS FirstName, LastName FROM employees;
+SELECT EmployeeID, INITCAP(FirstName) AS FirstName, INITCAP(LastName) AS LastName FROM employees;
+SELECT * FROM employees WHERE LOWER(LastName) = 'smith';
