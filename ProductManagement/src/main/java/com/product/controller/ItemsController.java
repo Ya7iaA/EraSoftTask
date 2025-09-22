@@ -14,10 +14,10 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/ItemController")
+@WebServlet("/ItemsController")
 public class ItemsController extends HttpServlet {
 
-    @Resource(name="jdbc/MyDB")
+    @Resource(name = "jdbc/MyDB")
     DataSource dataSource;
 
     @Override
@@ -31,23 +31,23 @@ public class ItemsController extends HttpServlet {
 
         switch (action) {
             case "list":
-                listItem(req,resp);
-                resp.getWriter().write("Listing items...");
+                listItem(req, resp);
                 break;
             case "add":
-                addItem(req,resp);
-                resp.getWriter().write("Adding an item...");
+                addItem(req, resp);
+                resp.sendRedirect("ItemsController?action=list");
                 break;
             case "delete":
-                removeItem(req,resp);
-                resp.getWriter().write("Deleting an item...");
+                removeItem(req, resp);
+                resp.sendRedirect("ItemsController?action=list");
                 break;
             case "update":
-                editItem(req,resp);
-                resp.getWriter().write("Updating an item...");
+                editItem(req, resp);
+                resp.sendRedirect("ItemsController?action=list");
                 break;
             default:
                 action = "list";
+                break;
         }
     }
 
@@ -93,5 +93,13 @@ public class ItemsController extends HttpServlet {
         // View Items
         ItemService itemService = new ItemServiceImpl(dataSource);
         List<Items> itemsList = itemService.listItems();
+        // Set Items In Request Scope
+        req.setAttribute("list", itemsList);
+        // Forward To JSP Page
+        try {
+            req.getRequestDispatcher("pages/Items.jsp").forward(req, resp);
+        } catch (ServletException | IOException e) {
+            System.out.println("Forward Exception: " + e.getMessage());
+        }
     }
 }

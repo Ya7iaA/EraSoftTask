@@ -26,7 +26,7 @@ public class ItemServiceImpl implements ItemService {
         try {
             connection = dataSource.getConnection();
             statement = connection.createStatement();
-            query = "SELECT * FROM ITEMS ORDER BY ID";
+            query = "SELECT * FROM ITEMS";
             ResultSet resultSet = statement.executeQuery(query);
 
             List<Items> listItems = new ArrayList<>();
@@ -87,7 +87,7 @@ public class ItemServiceImpl implements ItemService {
         try {
             connection = dataSource.getConnection();
             statement = connection.createStatement();
-            query = "DELETE ITEM FROM ITEMS WHERE ITEM_ID = " + itemId;
+            query = "DELETE ITEMS WHERE ITEM_ID = " + itemId;
             statement.executeQuery(query);
         } catch (SQLException e) {
             System.out.println("SQLException: " + e.getMessage());
