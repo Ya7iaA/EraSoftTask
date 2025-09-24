@@ -33,6 +33,10 @@ public class ItemsController extends HttpServlet {
             case "list":
                 listItem(req, resp);
                 break;
+            case "addForm":
+                addForm(req, resp);
+                resp.sendRedirect("ItemsController?action=list");
+                break;
             case "add":
                 addItem(req, resp);
                 resp.sendRedirect("ItemsController?action=list");
@@ -41,13 +45,34 @@ public class ItemsController extends HttpServlet {
                 removeItem(req, resp);
                 resp.sendRedirect("ItemsController?action=list");
                 break;
-            case "update":
+            case "editForm":
+                editForm(req, resp);
+                break;
+            case "edit":
                 editItem(req, resp);
                 resp.sendRedirect("ItemsController?action=list");
                 break;
             default:
                 action = "list";
                 break;
+        }
+    }
+
+    private void editForm(HttpServletRequest req, HttpServletResponse resp) {
+        // Forward To JSP Page
+        try {
+            req.getRequestDispatcher("EditItem.jsp").forward(req, resp);
+        } catch (ServletException | IOException e) {
+            System.out.println("Forward Exception: " + e.getMessage());
+        }
+    }
+
+    private void addForm(HttpServletRequest req, HttpServletResponse resp) {
+        // Forward To JSP Page
+        try {
+            req.getRequestDispatcher("AddItem.jsp").forward(req, resp);
+        } catch (ServletException | IOException e) {
+            System.out.println("Forward Exception: " + e.getMessage());
         }
     }
 
@@ -58,12 +83,11 @@ public class ItemsController extends HttpServlet {
 
     private void editItem(HttpServletRequest req, HttpServletResponse resp) {
         // Get Item Data From Request
-        long id = Long.parseLong(req.getParameter("id"));
         String name = req.getParameter("itemName");
         double price = Double.parseDouble(req.getParameter("price"));
         int quantity = Integer.parseInt(req.getParameter("quantity"));
         // Update Item
-        Items item = new Items(id, name, price, quantity);
+        Items item = new Items(name, price, quantity);
         // Edit Item
         ItemService itemService = new ItemServiceImpl(dataSource);
         itemService.editItem(item);
@@ -97,7 +121,7 @@ public class ItemsController extends HttpServlet {
         req.setAttribute("list", itemsList);
         // Forward To JSP Page
         try {
-            req.getRequestDispatcher("pages/Items.jsp").forward(req, resp);
+            req.getRequestDispatcher("ItemsList.jsp").forward(req, resp);
         } catch (ServletException | IOException e) {
             System.out.println("Forward Exception: " + e.getMessage());
         }
