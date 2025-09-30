@@ -7,10 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="manager" class="com.spring.core.ManagerServiceXML">
+    <bean id="manager" class="com.spring.core.ManagerService">
 
     </bean>
-    <bean id="person" class="com.spring.core.PersonServiceXML">
+    <bean id="person" class="com.spring.core.PersonService">
 
     </bean>
 </beans>

@@ -8,10 +8,10 @@ public class MainXML {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
-        ManagerService managerService = applicationContext.getBean("manager", ManagerServiceXML.class);
+        ManagerService managerService = applicationContext.getBean("manager", ManagerService.class);
         managerService.saveName("Ahmed");
         managerService.updateName("Ali");
-        UserServiceXML personService = applicationContext.getBean("person", PersonServiceXML.class);
+        UserService personService = applicationContext.getBean("person", PersonService.class);
         personService.saveName("Ahmed");
         personService.updateName("Ali");
     }
