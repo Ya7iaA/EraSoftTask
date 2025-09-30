@@ -1,11 +1,11 @@
 package com.spring.core;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringCoreConfig.class);
         ManagerService managerService = applicationContext.getBean("managerService", ManagerService.class);
         managerService.saveName("Ahmed");
         managerService.updateName("Ali");
