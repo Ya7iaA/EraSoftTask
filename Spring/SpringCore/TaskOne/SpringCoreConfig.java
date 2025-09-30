@@ -1,5 +1,6 @@
 package com.spring.core;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -9,4 +10,13 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:data.properties")
 public class SpringCoreConfig {
 
+    @Bean
+    public UserService getPersonService(){
+        return new PersonService();
+    }
+
+    @Bean
+    public UserService getManagerService(){
+        return new ManagerService();
+    }
 }

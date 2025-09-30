@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringCoreConfig.class);
-        ManagerService managerService = applicationContext.getBean("managerService", ManagerService.class);
+        ManagerService managerService = applicationContext.getBean("getManagerService", ManagerService.class);
         managerService.saveName("Ahmed");
         managerService.updateName("Ali");
-        UserService personService = applicationContext.getBean("personService", PersonService.class);
+        UserService personService = applicationContext.getBean("getPersonService", PersonService.class);
         personService.saveName("Ahmed");
         personService.updateName("Ali");
     }
